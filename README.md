@@ -1,13 +1,13 @@
 # Rosewill Loving Arms Covenant House — site recovery
 
-This repository is a self-contained archival recreation of the public `rosewill.org` site as observed on 2026-11-17. It is intentionally separate from the modern Rosewill project and never changes the production site.
+This repository is a self-contained, one-to-one static mirror of the public `rosewill.org` site as captured on 2026-11-17. It uses the original page markup, page-specific inline styling, and the source site-builder CSS/JavaScript; only public URLs have been rewritten to local files and internal navigation. It is intentionally separate from the modern Rosewill project and never changes the production site.
 
 ## Recovered pages
 
 - Home, About, Our Founder, Services, Contact, Resources, Events
 - Privacy Policy and Legal Notice
 
-All recovered public photographs, logo variants, favicon files, backgrounds, service imagery, and resource screenshots are stored locally in `assets/` (52 files). The original fetched HTML is retained in `source-snapshots/` for provenance. `ASSET_SOURCES.md` records the asset-origin URL pattern and source site.
+All recovered public photographs, logo variants, favicon files, backgrounds, service imagery, resource screenshots, source CSS, JavaScript and fonts are stored locally in `mirror/`. The original fetched HTML is retained in `source-snapshots/` for provenance. `ASSET_SOURCES.md` records the asset-origin URL pattern and source site. `scripts/mirror-current-site.mjs` reproducibly rebuilds the local mirror from the captured snapshots.
 
 ## Run locally
 
