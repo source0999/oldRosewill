@@ -1,3 +1,10 @@
+// Retire cached copies of the previous reconstruction. The source-page mirror
+// does not load this file; only an old cached HTML document does.
+if (!new URLSearchParams(location.search).has('mirror')) {
+  const url = new URL(location.href);
+  url.searchParams.set('mirror', '191ef55');
+  location.replace(url.href);
+}
 const nav=[['About','about'],['Our Founder','our-founder'],['Services','services'],['Contact','contact'],['Resources','resources'],['Events','events']];
 const path=location.pathname.replace(/^.*oldRosewill\/?/,'').replace(/^\//,'').replace(/\/$/,'')||'home';
 const A=path==='home'?'assets/':'../assets/';
